@@ -1,4 +1,4 @@
-import {DECREMENT, INCREMENT} from "./types";
+import {ASYNC_INCREMENT, DECREMENT, INCREMENT} from "./types";
 
 export function rootReducer(state, action) {
     if(action.type === INCREMENT) {
