@@ -1,6 +1,7 @@
 import './styles.css'
 import {applyMiddleware, createStore} from "redux";
 import thunk from 'redux-thunk';
+import logger from 'redux-logger'
 import {rootReducer} from "./redux/rootReducer";
 import {asyncIncrement, decrement, increment} from "./redux/actions";
 
@@ -13,7 +14,7 @@ const themeBtn = document.getElementById('theme')
 const store = createStore(
     rootReducer,
     0,
-    applyMiddleware(thunk))
+    applyMiddleware(thunk, logger))
 
 
 
